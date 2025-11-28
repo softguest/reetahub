@@ -20,7 +20,7 @@ export default async function HomePage() {
     <div className="bg-black min-h-screen overflow-x-hidden">
       <Navbar />
       <Hero />
-
+    {/* lets role online */}
      <section className="max-w-7xl mx-auto mt-20 px-6 grid md:grid-cols-3 gap-8">
         {data.map((p) => (
           <Link
