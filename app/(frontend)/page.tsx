@@ -19,7 +19,6 @@ export default async function HomePage() {
   return (
     <div className="bg-black min-h-screen overflow-x-hidden">
       <Hero />
-    {/* lets role online */}
      <section className="max-w-7xl mx-auto mt-20 px-6 grid md:grid-cols-3 gap-8">
         {data.map((p) => (
           <Link
