@@ -2,6 +2,7 @@ import Image from "next/image";
 import { db } from "@/config/db";
 import { properties } from "@/config/schema";
 import { eq } from "drizzle-orm";
+import GalleryModal from "./GalleryModal";
 
 export default async function PropertyDetailsPage({
   params,
@@ -68,25 +69,10 @@ export default async function PropertyDetailsPage({
         {Array.isArray(property.gallery) && property.gallery.length > 0 && (
           <div>
             <h2 className="text-2xl font-semibold mb-4">Gallery</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {property.gallery.map((img, i) => (
-                <div
-                  key={i}
-                  className="relative w-full h-48 overflow-hidden rounded-lg shadow-md 
-                            transform transition duration-500 ease-in-out 
-                            hover:scale-105 hover:z-10 animate-fadeIn"
-                >
-                  <Image
-                    src={img}
-                    alt={`Gallery ${i}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
+            <GalleryModal images={property.gallery} />
           </div>
         )}
+
 
 
         {/* Metadata */}
