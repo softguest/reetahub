@@ -41,7 +41,7 @@ export default async function PropertyDetailsPage({
         <div className="flex justify-between items-start mb-6">
           <div>
             <h1 className="text-4xl text-white font-semibold">{property.title}</h1>
-            <p className="text-lg text-gray-200">{property.city}</p>
+            <p className="text-lg text-gray-200">City: {property.city}</p>
           </div>
           <div className="text-right">
             {property.discounted_price ? (
@@ -61,19 +61,18 @@ export default async function PropertyDetailsPage({
             </p>
           </div>
         </div>
-
+            <hr />
         {/* Description */}
+        <p className="text-gray-400 my-4">Land Description</p>
         <p className="text-lg text-white leading-relaxed mb-8">{property.description}</p>
-
+        <div className="text-2xl text-white leading-relaxed mb-8">Contact: <span className="text-green-500 font-extrabold">6 94 12 78 02</span></div>
         {/* Gallery */}
         {Array.isArray(property.gallery) && property.gallery.length > 0 && (
           <div>
-            <h2 className="text-2xl font-semibold mb-4">Gallery</h2>
+            <h2 className="text-2xl text-white font-semibold mb-4">Gallery</h2>
             <GalleryModal images={property.gallery} />
           </div>
         )}
-
-
 
         {/* Metadata */}
         <div className="mt-10 text-sm text-gray-500">
