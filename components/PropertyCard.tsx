@@ -14,7 +14,7 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/10 overf
 <div className="mt-3 text-white">
 <h3 className="text-xl font-semibold">{title}</h3>
 <p className="text-sm opacity-70">{location}</p>
-<p className="text-lg font-bold mt-2">${price}</p>
+<p className="text-lg font-bold mt-2">{price} XAF</p>
 </div>
 </motion.div>
 );

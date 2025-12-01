@@ -52,7 +52,7 @@ export const Navbar = () => {
 
           {!user ? (
             <div className="">
-              {/* <Link href="/sign-in">
+               <Link href="/sign-in">
                 <Button
                   variant="outline"
                   className="border-white text-white hover:bg-white hover:text-black"
@@ -60,12 +60,6 @@ export const Navbar = () => {
                   Sign In
                 </Button>
               </Link>
-
-              <Link href="/sign-up">
-                <Button className="bg-white text-black hover:bg-gray-200">
-                  Sign Up
-                </Button>
-              </Link> */}
             </div>
           ) : (
             <div className="flex items-center gap-4">
@@ -109,7 +103,7 @@ export const Navbar = () => {
 
           {!user ? (
             <div className="">
-              {/* <Link href="/sign-in" onClick={() => setIsOpen(false)}>
+               <Link href="/sign-in" onClick={() => setIsOpen(false)}>
                 <Button
                   variant="outline"
                   className="w-full border-white text-white hover:bg-white hover:text-black"
@@ -117,12 +111,6 @@ export const Navbar = () => {
                   Sign In
                 </Button>
               </Link>
-
-              <Link href="/sign-up" onClick={() => setIsOpen(false)}>
-                <Button className="w-full bg-white text-black hover:bg-gray-200">
-                  Sign Up
-                </Button>
-              </Link> */}
             </div>
           ) : (
             <div className="flex flex-col gap-4">

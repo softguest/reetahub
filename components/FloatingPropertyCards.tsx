@@ -36,7 +36,7 @@ export const FloatingPropertyCards = ({ propertyCards }: Props) => {
           />
           <div className="p-4 text-white">
             <h3 className="text-xl font-bold">{card.title}</h3>
-            <p className="text-cyan-400 font-semibold mt-1">${card.price.toLocaleString()}</p>
+            <p className="text-cyan-400 font-semibold mt-1">{card.price.toLocaleString()} XAF</p>
           </div>
         </motion.div>
       ))}
