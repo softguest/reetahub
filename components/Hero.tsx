@@ -3,6 +3,7 @@ import { db } from "@/config/db";
 import { properties } from "@/config/schema";
 import { desc } from "drizzle-orm";
 import { FloatingPropertyCards } from "./FloatingPropertyCards"; // client component
+import { Link } from "lucide-react";
 
 export const Hero = async () => {
   // Fetch first 6 properties
@@ -41,15 +42,21 @@ export const Hero = async () => {
       {/* CTA buttons */}
       <div className="relative z-30 flex flex-col items-center justify-center text-center px-6 pt-[65vh]">
         <div className="flex space-x-6">
+          <Link href="/buy">
           <button className="px-6 py-3 bg-cyan-400/90 hover:bg-cyan-500 text-black font-bold rounded-lg uppercase tracking-wider shadow-lg transition-all">
             Buy
           </button>
+          </Link>
+          <Link href="/rent">
           <button className="px-6 py-3 bg-black/70 hover:bg-black/80 border border-cyan-400 text-cyan-400 font-bold rounded-lg uppercase tracking-wider shadow-lg transition-all">
             Rent
           </button>
+          </Link>
+          <Link href="/contact">
           <button className="px-6 py-3 bg-black/50 hover:bg-black/60 text-white font-bold rounded-lg uppercase tracking-wider shadow-lg transition-all">
             Explore Projects
           </button>
+          </Link>
         </div>
       </div>
     </section>
