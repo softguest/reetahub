@@ -1,4 +1,6 @@
-import { Navbar } from "@/components/Navbar";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 import { Hero } from "@/components/Hero";
 import { PropertyCard } from "@/components/PropertyCard";
 import { Footer } from "@/components/Footer";
@@ -19,12 +21,12 @@ export default async function HomePage() {
   return (
     <div className="bg-black min-h-screen overflow-x-hidden">
       <Hero />
-     <section className="max-w-7xl mx-auto mt-20 px-6 grid md:grid-cols-3 gap-8">
+      <section className="max-w-7xl mx-auto mt-20 px-6 grid md:grid-cols-3 gap-8">
         {data.map((p) => (
           <Link
             key={p.id}
             href={`/properties/${p.id}`}
-            className="block" // ensures it behaves like a block element
+            className="block"
           >
             <PropertyCard
               title={p.title}

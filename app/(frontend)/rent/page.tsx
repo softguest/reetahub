@@ -1,5 +1,6 @@
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 import { PropertyCard } from "@/components/PropertyCard";
 import { Footer } from "@/components/Footer";
 import { eq } from "drizzle-orm";
